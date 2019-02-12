@@ -1,0 +1,583 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $app-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: $code-font;
+}
+
+header {
+    display: flex;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    max-height: 800px;
+    flex-direction: column;
+
+    @include respond-below ( small ) {
+        justify-content: space-around;
+        height: 700px;
+    }
+
+    &::before {
+        background-image: url( '../assets/sunset.jpg' );
+        background-repeat: none;
+        background-position: center bottom;
+        background-size: cover;
+        content: '';
+        height: 800px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        will-change: transform;
+        z-index: -2;
+    }
+
+    &::after {
+        background: rgba( $black, .3 );
+        height: 800px;
+        width: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .handshake {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+            height: 150px;
+            margin-right: 2em;
+        }
+
+        @include respond-below ( small ) {
+            flex-direction: column;
+            max-width: 50vw;
+
+            .logo {
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 1.75em;
+                margin-bottom: 0;
+            }
+        }
+
+        @include respond-above ( small ) {
+            max-width: 70vw;
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+    }
+
+    h1 {
+        font-family: $headline-font;
+        font-size: 3em;
+        font-weight: 900;
+        line-height: 1.25em;
+        color: $white;
+        margin-bottom: 0;
+
+        @include respond-below ( small ) {
+            font-size: 2.5em;
+            text-align: center;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+
+        @include respond-below ( small ) {
+            text-align: center;
+        }
+    }
+
+    p {
+        color: $white;
+        font-size: 1.5em;
+        margin-bottom: 3em;
+        max-width: 800px;
+        text-align: center;
+        line-height: 1.5em;
+
+        @include respond-below ( small ) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+.action-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    min-height: 200px;
+    position: relative;
+    z-index: 2;
+
+    @include respond-above( small ) {
+        max-width: 850px;
+        width: 850px;
+    }
+
+    @include respond-below ( small ) {
+        align-items: center;
+        flex-direction: column;
+
+        .call-to-action {
+            margin-bottom: 5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: -3.5em;
+            }
+
+            &.slack {
+                padding-left: 4em;
+            }
+
+            &.meetup {
+                padding-right: 4em;
+            }
+        }
+    }
+}
+
+.call-to-action {
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    font-size: 1.25em;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 2em;
+    margin: 0 2em;
+    padding: .25em 4em;
+    position: relative;
+    text-decoration: none;
+    transition: all 200ms ease;
+    white-space: nowrap;
+
+    &.slack {
+        background: $slack;
+        padding-left: 6em;
+        width: 160px;
+
+        .content {
+            width: 100%;
+        }
+    }
+
+    &.meetup {
+        background: $meetup;
+        padding-right: 5em;
+    }
+
+    .left {
+        left: -1em;
+    }
+
+    .right {
+        right: -1em;
+    }
+
+    img {
+        background: $white;
+        border-radius: 60px;
+        padding: .5em;
+        position: absolute;
+        height: 60px;
+        width: 60px;
+    }
+
+    &.grow > img {
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover > img {
+        transform: scale( 1.1 );
+    }
+
+    .response {
+        position: absolute;
+        top: 2em;
+
+        .success, .error {
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 6em 0 4em;
+    position: relative;
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include respond-below ( small ) {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        height: 200px;
+        position: absolute;
+        top: -8em;
+        background-image: url( '../assets/skyline.svg' );
+        width: 100vw;
+
+        @include respond-below ( small ) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 350px;
+        padding: 0 1em;
+        white-space: pre-wrap;
+        z-index: 2;
+
+        @include respond-below ( small ) {
+            margin: 0 auto 3em;
+            max-width: 70vw;
+
+            .icon {
+                display: none;
+                visibility: hidden;
+            }
+
+            .caption {
+                height: auto;
+            }
+        }
+    }
+
+    h2 {
+        font-family: $headline-font;
+        font-size: 2em;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: $text-color;
+        text-align: center;
+        margin: .5em 0;
+    }
+
+    .caption {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1em;
+        text-align: center;
+        height: 110px;
+        line-height: 1.5em;
+        font-size: 1em;
+        color: $text-color;
+    }
+
+    .dark-button {
+        background-color: darken( $primary-color, 10% );
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: darken( $primary-color, 20% );
+            transition: background-color 200ms ease;
+        }
+    }
+}
+
+button, .button {
+    padding: 1em 2em;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    color: $white;
+    font-size: 1.25em;
+    font-weight: 700;
+    border-radius: 40px;
+    border: none;
+    text-decoration: none;
+
+    svg {
+        margin-right: .5em;
+    }
+
+    &:hover {
+        box-shadow: 0 3px 5px rgba( $black, .2 );
+    }
+}
+
+.sponsor {
+    min-height: 350px;
+    background: $light-green;
+    color: $white;
+    position: relative;
+    margin-top: 10em;
+    padding: 2em 0 10em;
+    text-align: center;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 100px;
+        position: absolute;
+        top: -6em;
+        background-image: url( '../assets/forest-light2.svg' );
+        width: 100vw;
+    }
+
+    p {
+        color: $text-color;
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    h1, h2 {
+        color: $text-color;
+        margin: 0 0 1em;
+    }
+
+    .sponsors-container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        max-width: 1400px;
+        margin: 0 auto;
+        color: $text-color;
+
+        .current {
+            flex: 1;
+            margin-bottom: 3em;
+        }
+
+        .past {
+            flex: 1;
+        }
+    }
+
+    .sponsors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .logo {
+            background: $white;
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            margin: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 1em;
+
+            /* stylelint-disable */
+            &.wes {
+                background: #252527;
+            }
+            /* stylelint-enable */
+
+            &.grow {
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                transform: scale( 1.1 );
+            }
+
+            img {
+                max-width: 80%;
+                max-height: 80%;
+
+                .full-width {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .sponsor-list-item {
+        margin-bottom: 1em;
+    }
+}
+
+.community {
+    color: $black;
+    background: $medium-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 150px;
+        position: absolute;
+        top: -8em;
+        background-image: url( '../assets/forest-light.svg' );
+        width: 100vw;
+
+        @include respond-below ( small ) {
+            top: -6em;
+        }
+    }
+
+    h1 {
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    .group-listings {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 2em;
+        width: 80vw;
+        max-width: 1400px;
+
+        @include respond-below ( small ) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .group {
+        flex: 1;
+        margin: 0 2em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include respond-below ( small ) {
+
+            p {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+        .group-logo {
+            background: $white;
+            padding: 2em;
+            border-radius: 160px;
+            margin: 0 auto 1em;
+            height: 160px;
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond-below ( small ) {
+                height: 120px;
+                width: 120px;
+                padding: 1em;
+                overflow: hidden;
+            }
+
+            &.grow {
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                transform: scale( 1.1 );
+            }
+
+            img {
+                max-height: 80%;
+                max-width: 80%;
+            }
+        }
+
+        h2, p {
+            text-align: center;
+            line-height: 1.75em;
+        }
+    }
+}
+
+.footer {
+    background: $dark-grey;
+    padding: 3em;
+    color: $white;
+    text-align: center;
+
+    a {
+        color: $primary-color;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .contact {
+        color: $white;
+        text-align: center;
+        max-width: 800px;
+        margin: 2em auto 0;
+
+        .social {
+            cursor: pointer;
+            max-width: 50px;
+            margin: 0 1em;
+
+            &.padded {
+                background: $white;
+                padding: .5em;
+                height: 34px;
+                width: 34px;
+                border-radius: 50px;
+            }
+        }
+    }
+}

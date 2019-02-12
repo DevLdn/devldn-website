@@ -1,0 +1,23 @@
+{
+  "name": "devldnapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv-safe": "^6.1.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.4",
+    "form-data": "^2.3.3",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.10"
+  }
+}

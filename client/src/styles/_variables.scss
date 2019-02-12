@@ -1,0 +1,28 @@
+/* stylelint-disable */
+$app-font: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+$code-font: 'Courier New', monospace;
+$headline-font: 'Raleway', sans-serif;
+$handwriting-font: 'Pacifico', cursive;
+
+$white: #fff;
+$off-white: #f9f9f9;
+$light-grey: #ededed;
+$mid-grey: #999;
+$mute-grey: #383838;
+$dark-grey: #272525;
+$black: #000;
+
+$primary-color: #bac54b;
+$dark-primary-color: darken($primary-color, 20%);
+$dark-green: #104539;
+$medium-green: #e2e5a3;
+$light-green: #efefca;
+$secondary-color: #639acf;
+$tertiary-color: #f7b733;
+
+$slack: #72C5CD;
+$meetup: #ED1C40;
+
+$text-color: #3e3e3e;
+$link-color: $primary-color;
+/* stylelint-enable */
