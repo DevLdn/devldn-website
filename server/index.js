@@ -6,8 +6,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const validator = require('email-validator');
+const path = require('path');
 const app = express();
-const port = process.env.PORT;
+const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || 'localhost';
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -38,4 +40,20 @@ app.post('/invite', (req, res) => {
     })
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+if (process.env.NODE_ENV === 'production') {
+  // Serve out of a different build dir in production
+  app.use(express.static(path.join(__dirname, '/client')));
+
+  app.get('*', (req, res) => {
+    console.log(path.join(__dirname, '/client/index.html'));
+    res.sendfile(path.join(__dirname, '/client/index.html'));
+  });
+} else {
+  app.use(express.static(path.join(__dirname, '/../client/public')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../client/public/index.html'));
+  });
+}
+
+app.listen(PORT, HOST, () => console.log(`devldn.ca listening on ${HOST}:${PORT}!`));
