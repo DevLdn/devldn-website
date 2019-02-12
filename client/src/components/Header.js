@@ -3,6 +3,8 @@ import logo from '../assets/dev-ldn_white.png';
 import slack from '../assets/slack.svg';
 import meetup from '../assets/meetup.png';
 
+const apiURL = process.env.REACT_APP_API_URL || '';
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +30,7 @@ class Header extends Component {
 
     this.setState({ error: null, isLoading: false });
     let _this = this;
-    fetch('http://localhost:3002/invite', {
+    fetch(`${apiURL}/invite`, {
       method: 'post',
       body: JSON.stringify({ email: this.state.email }),
       headers: { 'Content-Type': 'application/json' }
