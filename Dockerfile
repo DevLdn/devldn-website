@@ -32,5 +32,4 @@ WORKDIR /app
 COPY --from=server /server ./
 COPY --from=client /client/build ./client
 
-EXPOSE 5000
 CMD ["npm", "start"]
