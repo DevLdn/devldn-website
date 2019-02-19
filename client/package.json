@@ -10,7 +10,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "^2.1.5",
-    "stylelint": "^9.6.0"
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "start": "react-scripts start",
