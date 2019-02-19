@@ -1,5 +1,21 @@
 # Dev London website
 
+## Server
+
+### Docker Build
+
+`docker build -t devldn.ca .`
+
+### Docker Run
+Environment Variables
+
+PORT=5000
+HOST=0.0.0.0
+TOKEN=abc123
+NODE_ENV=production
+
+`docker run -it --rm -e PORT=5000 -e HOST=0.0.0.0 -e TOKEN=abc123 -e NODE_ENV=production -p 5000:5000 devldn.ca`
+
 ## Client
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -22,19 +38,3 @@ This project uses:
 - `stylelint` to lint our scss
 - [Lindua icons](https://icomoon.io/icons-lindua.html)
 - Google font: [Teko](https://fonts.google.com/specimen/Teko)
-
-## Server
-
-### Docker Build
-
-`docker build -t devldn.ca .`
-
-### Docker Run
-Environment Variables
-
-PORT=5000
-HOST=0.0.0.0
-TOKEN=abc123
-NODE_ENV=production
-
-`docker run -it --rm -e PORT=5000 -e HOST=0.0.0.0 -e TOKEN=abc123 -e NODE_ENV=production -p 5000:5000 devldn.ca`
