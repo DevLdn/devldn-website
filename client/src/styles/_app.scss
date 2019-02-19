@@ -232,12 +232,27 @@ header {
     }
 
     .response {
-        position: absolute;
-        top: 2em;
 
-        .success, .error {
+        .success,
+        .error {
+            position: absolute;
+            right: -1em;
             font-size: 1em;
+            font-weight: 400;
             margin-bottom: 0;
+            margin-top: 0;
+            padding: .5em 1em;
+            border-radius: 30px;
+        }
+
+        .success {
+            top: 4em;
+            background: darken( $primary-color, 20% );
+        }
+
+        .error {
+            top: 10.5em;
+            background: $error-color;
         }
     }
 }

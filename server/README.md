@@ -1,13 +1,15 @@
-## Clone
+## Dev London Server
 
-`git clone git@github.com:LadyCarni/devldn-api.git`
+### Docker Build
 
-## Docker
+`docker build -t devldn.ca .`
 
-`docker build -t slackapp .`
+### Docker Run
+Environment Variables
 
-`docker run -d --name ts -e TOKEN=123 -e PORT=3002 p 3002:3002 slackapp`
+PORT=5000
+HOST=0.0.0.0
+TOKEN=abc123
+NODE_ENV=production
 
-## Run locally
-
-`npm start`
+`docker run -it --rm -e PORT=5000 -e HOST=0.0.0.0 -e TOKEN=abc123 -e NODE_ENV=production -p 5000:5000 devldn.ca`
