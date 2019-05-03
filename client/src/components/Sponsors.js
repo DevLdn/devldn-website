@@ -17,7 +17,7 @@ class Sponsors extends Component {
           <div className="sponsors">
             <div className="current">
               <h1>Current Sponsors</h1>
-              <p>
+              <p className="thanks">
                 This group is made possible by the generosity of our monthly
                 sponsors.
               </p>
@@ -47,6 +47,46 @@ class Sponsors extends Component {
             <div className="past">
               <h2>Past Sponsors</h2>
               <ul className="sponsors-list">
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://wesbos.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wes Bos
+                  </a>{' '}
+                  (giveaway sponsor)
+                </li>
+                <li className="sponsor-list-item">
+                  <a
+                    href="http://reddingdesigns.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Redding Designs
+                  </a>{' '}
+                  (refreshments sponsor)
+                </li>
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://thearcane.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Arcane
+                  </a>{' '}
+                  (venue sponsor)
+                </li>
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://wesbos.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Info Tech
+                  </a>{' '}
+                  (venue sponsor)
+                </li>
                 <li className="sponsor-list-item">
                   <a
                     href="http://ztr.com/"
