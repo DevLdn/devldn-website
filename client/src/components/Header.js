@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../assets/dev-ldn_white.png';
-import slack from '../assets/slack.svg';
+import slack from '../assets/Slack_Mark.svg';
 import meetup from '../assets/meetup.png';
 
 const apiURL = process.env.REACT_APP_API_URL || '';

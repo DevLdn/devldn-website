@@ -565,7 +565,27 @@ button, .button {
     background: $dark-grey;
     padding: 3em;
     color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .name {
+        bottom: -50px;
+        fill: $white;
+        opacity: .3;
+        position: absolute;
+        width: 90%;
+        align-self: center;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+    }
 
     a {
         color: $primary-color;
@@ -576,23 +596,32 @@ button, .button {
     }
 
     .contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         color: $white;
-        text-align: center;
-        max-width: 800px;
-        margin: 2em auto 0;
+        text-align: left;
+
+        h3 {
+            flex-grow: 2;
+            order: 1;
+            min-width: 100%;
+        }
 
         .social {
+            flex-grow: 1;
+            order: 2;
             cursor: pointer;
             max-width: 50px;
-            margin: 0 1em;
+            margin-right: 1em;
+        }
 
-            &.padded {
-                background: $white;
-                padding: .5em;
-                height: 34px;
-                width: 34px;
-                border-radius: 50px;
-            }
+        .padded {
+            background: $white;
+            padding: .5em;
+            height: 34px;
+            width: 34px;
+            border-radius: 50px;
         }
     }
 }
