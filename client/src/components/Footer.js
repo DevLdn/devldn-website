@@ -32,21 +32,32 @@ class Footer extends Component {
               <img src={meetup} alt="Meetup logo" className="padded" />
             </a>
           </div>
-          <p>
-            Looking for the next step in your career? Check out{' '}
-            <a
-              href="https://www.ledc.com/tech-jobs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LEDC's job board
-            </a>{' '}
-            for the latest tech jobs in London.
-          </p>
-          <p>
-            Keep in touch and we look forward to seeing you at the next Dev
-            London event!
-          </p>
+          <div className="footer-info">
+            <p>
+              Looking for the next step in your career?
+              <br />
+              Check out{' '}
+              <a
+                href="https://www.ledc.com/tech-jobs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LEDC's job board
+              </a>{' '}
+              for the latest tech jobs in London.
+            </p>
+            <ul className="links">
+              <li>
+                <a href="">Event Calendar</a>
+              </li>
+              <li>
+                <a href="">Volunteer</a>
+              </li>
+              <li>
+                <a href="">Submit an Idea</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );

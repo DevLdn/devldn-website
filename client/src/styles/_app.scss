@@ -564,11 +564,9 @@ button, .button {
 .footer {
     background: $dark-grey;
     padding: 3em;
-    color: $white;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     height: 300px;
-    text-align: center;
     overflow: hidden;
     position: relative;
 
@@ -582,6 +580,7 @@ button, .button {
     }
 
     .footer-content {
+        align-items: flex-start;
         display: flex;
         flex-direction: row;
         z-index: 1;
@@ -596,24 +595,23 @@ button, .button {
     }
 
     .contact {
+        align-items: flex-start;
+        justify-content: flex-start;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         color: $white;
         text-align: left;
 
         h3 {
-            flex-grow: 2;
-            order: 1;
+            font-weight: 300;
             min-width: 100%;
         }
 
         .social {
-            flex-grow: 1;
-            order: 2;
             cursor: pointer;
             max-width: 50px;
             margin-right: 1em;
+            width: 50px;
         }
 
         .padded {
@@ -622,6 +620,26 @@ button, .button {
             height: 34px;
             width: 34px;
             border-radius: 50px;
+        }
+    }
+
+    .footer-info {
+        color: $white;
+        text-align: right;
+        flex: 1;
+
+        p {
+            line-height: 1.5em;
+        }
+
+        .links {
+            list-style-type: none;
+
+            a {
+                font-size: 1.25em;
+                font-weight: 500;
+                line-height: 1.5em;
+            }
         }
     }
 }
