@@ -364,14 +364,96 @@ button, .button {
     }
 }
 
-.sponsor {
+.sponsors {
+    background: $dark-grey;
+    color: $white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.sponsors-gallery {
+    display: flex;
+    flex-direction: row;
+
+    .partner-logo {
+        background: $white;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 1em;
+
+        /* stylelint-disable */
+        &.wes {
+            background: #252527;
+        }
+        /* stylelint-enable */
+
+        &.grow {
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+            transform: scale( 1.1 );
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+
+            .full-width {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.sponsors-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+
+    .sponsor-list-item {
+        font-size: 1.25em;
+        margin-bottom: 1em;
+    }
+}
+
+.mission {
+    flex: 1;
+
+    h2 {
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 3em;
+        font-weight: 500;
+        line-height: 1.25em;
+        margin-right: 1.5em;
+        margin-top: 0;
+    }
+}
+
+.shoutout {
     min-height: 350px;
     background: $light-green;
     color: $white;
     position: relative;
     margin-top: 10em;
     padding: 2em 0 10em;
-    text-align: center;
 
     &::before {
         content: '';
@@ -383,81 +465,22 @@ button, .button {
         width: 100vw;
     }
 
-    p {
-        color: $text-color;
-        font-size: 1.25em;
-        text-align: center;
-    }
-
     h1, h2 {
         color: $text-color;
         margin: 0 0 1em;
     }
 
-    .sponsors-container {
+    .shoutout-container {
         display: flex;
-        flex-direction: column;
-        width: 80vw;
-        max-width: 1400px;
+        flex-direction: row;
         margin: 0 auto;
         color: $text-color;
+        width: 80vw;
+        max-width: 1400px;
 
         .current {
-            flex: 1;
             margin-bottom: 3em;
         }
-
-        .past {
-            flex: 1;
-        }
-    }
-
-    .sponsors {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .logo {
-            background: $white;
-            height: 100px;
-            width: 100px;
-            border-radius: 100px;
-            margin: 1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 1em;
-
-            /* stylelint-disable */
-            &.wes {
-                background: #252527;
-            }
-            /* stylelint-enable */
-
-            &.grow {
-                cursor: pointer;
-                transition: all .2s ease-in-out;
-            }
-
-            &:hover {
-                transform: scale( 1.1 );
-            }
-
-            img {
-                max-width: 80%;
-                max-height: 80%;
-
-                .full-width {
-                    max-width: 100%;
-                }
-            }
-        }
-    }
-
-    .sponsor-list-item {
-        margin-bottom: 1em;
     }
 }
 
