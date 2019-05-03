@@ -57,10 +57,15 @@ header {
         z-index: -1;
     }
 
+    .name {
+        fill: $white;
+    }
+
     .handshake {
         align-items: center;
         display: flex;
         flex-direction: row;
+        margin-bottom: 5em;
 
         .logo {
             height: 150px;
@@ -394,6 +399,7 @@ button, .button {
     flex: 1;
     text-align: left;
     max-width: 500px;
+    z-index: 1;
 
     h1, h2 {
         color: $light-grey;
@@ -466,21 +472,12 @@ button, .button {
 
 .shoutout {
     min-height: 350px;
-    background: $light-green;
+    background: $light-grey;
     color: $white;
     position: relative;
     margin-top: 10em;
-    padding: 2em 0 10em;
-
-    &::before {
-        content: '';
-        display: block;
-        height: 100px;
-        position: absolute;
-        top: -6em;
-        background-image: url( '../assets/forest-light2.svg' );
-        width: 100vw;
-    }
+    padding: 2em 0;
+    margin-bottom: -6em;
 
     .shoutout-container {
         display: flex;
@@ -494,27 +491,13 @@ button, .button {
 
 .community {
     color: $black;
-    background: $medium-green;
+    background: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 6em 2em 2em;
     position: relative;
-
-    &::before {
-        content: '';
-        display: block;
-        height: 150px;
-        position: absolute;
-        top: -8em;
-        background-image: url( '../assets/forest-light.svg' );
-        width: 100vw;
-
-        @include respond-below ( small ) {
-            top: -6em;
-        }
-    }
 
     h1 {
         letter-spacing: 1px;

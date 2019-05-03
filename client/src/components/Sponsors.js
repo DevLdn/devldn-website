@@ -14,7 +14,7 @@ class Sponsors extends Component {
               networking with influential software professionals.
             </p>
           </div>
-          <div className="sponsors">
+          <div className="sponsors shadow">
             <div className="current">
               <h1>Current Sponsors</h1>
               <p className="thanks">
