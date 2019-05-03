@@ -22,7 +22,7 @@ class Sponsors extends Component {
                 <div className="logo grow shadow">
                   <img
                     src={infotech}
-                    class="full-width"
+                    className="full-width"
                     alt="Info Tech Research Group logo"
                   />
                 </div>

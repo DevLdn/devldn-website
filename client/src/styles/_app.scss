@@ -564,8 +564,27 @@ button, .button {
 .footer {
     background: $dark-grey;
     padding: 3em;
-    color: $white;
-    text-align: center;
+    display: flex;
+    flex-flow: column;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+    .name {
+        bottom: -50px;
+        fill: $white;
+        opacity: .3;
+        position: absolute;
+        width: 90%;
+        align-self: center;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+    }
 
     a {
         color: $primary-color;
@@ -576,22 +595,50 @@ button, .button {
     }
 
     .contact {
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: flex;
+        flex-flow: row wrap;
         color: $white;
-        text-align: center;
-        max-width: 800px;
-        margin: 2em auto 0;
+        text-align: left;
+
+        h3 {
+            font-weight: 300;
+            min-width: 100%;
+        }
 
         .social {
             cursor: pointer;
             max-width: 50px;
-            margin: 0 1em;
+            margin-right: 1em;
+            width: 50px;
+        }
 
-            &.padded {
-                background: $white;
-                padding: .5em;
-                height: 34px;
-                width: 34px;
-                border-radius: 50px;
+        .padded {
+            background: $white;
+            padding: .5em;
+            height: 34px;
+            width: 34px;
+            border-radius: 50px;
+        }
+    }
+
+    .footer-info {
+        color: $white;
+        text-align: right;
+        flex: 1;
+
+        p {
+            line-height: 1.5em;
+        }
+
+        .links {
+            list-style-type: none;
+
+            a {
+                font-size: 1.25em;
+                font-weight: 500;
+                line-height: 1.5em;
             }
         }
     }
