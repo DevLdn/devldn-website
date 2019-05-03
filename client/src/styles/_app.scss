@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3 {
+    font-family: $header-font;
+}
+
 code {
     font-family: $code-font;
 }
@@ -93,7 +97,6 @@ header {
     }
 
     h1 {
-        font-family: $headline-font;
         font-size: 3em;
         font-weight: 900;
         line-height: 1.25em;
@@ -312,7 +315,6 @@ header {
     }
 
     h2 {
-        font-family: $headline-font;
         font-size: 2em;
         font-weight: 500;
         letter-spacing: 2px;
@@ -364,6 +366,25 @@ button, .button {
     }
 }
 
+.mission {
+    flex: 1;
+
+    h2 {
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 3em;
+        font-weight: 500;
+        line-height: 1.25em;
+        margin-right: 1.5em;
+        margin-top: 0;
+    }
+}
+
 .sponsors {
     background: $dark-grey;
     color: $white;
@@ -373,6 +394,16 @@ button, .button {
     flex: 1;
     text-align: left;
     max-width: 500px;
+
+    h1, h2 {
+        color: $light-grey;
+        font-weight: 100;
+        margin: 0 0 1em;
+    }
+
+    a {
+        color: $primary-color;
+    }
 }
 
 .sponsors-gallery {
@@ -428,25 +459,6 @@ button, .button {
     }
 }
 
-.mission {
-    flex: 1;
-
-    h2 {
-        font-size: 1em;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 0;
-    }
-
-    p {
-        font-size: 3em;
-        font-weight: 500;
-        line-height: 1.25em;
-        margin-right: 1.5em;
-        margin-top: 0;
-    }
-}
-
 .shoutout {
     min-height: 350px;
     background: $light-green;
@@ -465,11 +477,6 @@ button, .button {
         width: 100vw;
     }
 
-    h1, h2 {
-        color: $text-color;
-        margin: 0 0 1em;
-    }
-
     .shoutout-container {
         display: flex;
         flex-direction: row;
@@ -477,10 +484,6 @@ button, .button {
         color: $text-color;
         width: 80vw;
         max-width: 1400px;
-
-        .current {
-            margin-bottom: 3em;
-        }
     }
 }
 
