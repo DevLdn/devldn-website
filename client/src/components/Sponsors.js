@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import wes from '../assets/wes-bos.jpg';
-import infotech from '../assets/infotech.svg';
+import streamline from '../assets/streamline.gif';
+import wrkhub from '../assets/wrkhub-logo.png';
 
 class Sponsors extends Component {
   render() {
@@ -23,24 +23,24 @@ class Sponsors extends Component {
               </p>
               <div className="sponsors-gallery">
                 <a
-                  href="https://www.infotech.com/"
+                  href="https://wrkhub.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="partner-logo grow shadow"
+                >
+                  <img src={wrkhub} className="full-width" alt="Wrkhub logo" />
+                </a>
+                <a
+                  href="https://streamlineicons.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="partner-logo grow shadow"
                 >
                   <img
-                    src={infotech}
+                    src={streamline}
                     className="full-width"
-                    alt="Info Tech Research Group logo"
+                    alt="Streamline Icons logo"
                   />
-                </a>
-                <a
-                  href="https://wesbos.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partner-logo grow shadow wes"
-                >
-                  <img src={wes} alt="Wes Bos logo" />
                 </a>
               </div>
             </div>
