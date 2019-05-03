@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ReactComponent as DevName } from '../assets/dev-london-name.svg';
 import logo from '../assets/dev-ldn_white.png';
 import slack from '../assets/Slack_Mark.svg';
 import meetup from '../assets/meetup.png';
@@ -77,16 +78,10 @@ class Header extends Component {
         <div className="handshake">
           <img src={logo} className="logo" alt="Dev London logo" />
           <div className="headline">
-            <h1>Dev London</h1>
+            <DevName className="name" />
             <h2>Bringing tech together in the Forest City</h2>
           </div>
         </div>
-        <p>
-          Dev London is your opportunity to gather insights and get inspired by
-          the most influential software professionals. Hear their stories, ask
-          them questions, network with others in the industry. Refreshments are
-          on us!
-        </p>
         <div className="action-container">
           <div className={`call-to-action slack grow shadow ${slack_class}`}>
             <img
