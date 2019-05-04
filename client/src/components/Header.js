@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ReactComponent as DevName } from '../assets/dev-london-name.svg';
-import logo from '../assets/dev-ldn_white.png';
 import slack from '../assets/Slack_Mark.svg';
 import meetup from '../assets/meetup.png';
 
@@ -76,7 +75,6 @@ class Header extends Component {
     return (
       <header>
         <div className="handshake">
-          <img src={logo} className="logo" alt="Dev London logo" />
           <div className="headline">
             <DevName className="name" />
             <h2>Bringing tech together in the Forest City</h2>
@@ -90,7 +88,7 @@ class Header extends Component {
               alt="Slack logo"
             />
             <span className="content">
-              <span onClick={() => this.morphForm()}>Join the community</span>
+              <span onClick={() => this.morphForm()}>Join our Slack</span>
               <div className="form">
                 <input
                   type="text"

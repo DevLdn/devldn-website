@@ -65,7 +65,6 @@
         "message": "Lowercase letters are easier to distinguish from numbers"
     } ],
     "function-parentheses-newline-inside": "never-multi-line",
-    "function-parentheses-space-inside": "always",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "function-whitespace-after": "always",

@@ -10,7 +10,7 @@ class Info extends Component {
             <Icon name="calendar" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
-            <h2>Event Calendar</h2>
+            <h2>Events</h2>
           </div>
           <div className="caption">
             <p>
@@ -19,7 +19,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://www.meetup.com/Dev-London/events/calendar/"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ class Info extends Component {
             <Icon name="puzzle" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
-            <h2>Volunteer Positions</h2>
+            <h2>Volunteer</h2>
           </div>
           <div className="caption">
             <p>
@@ -41,7 +41,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://goo.gl/forms/iyx32mXrMsfRdjTw2"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +54,7 @@ class Info extends Component {
             <Icon name="led" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
-            <h2>Your Ideas</h2>
+            <h2>Ideas</h2>
           </div>
           <div className="caption">
             <p>
@@ -63,7 +63,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://goo.gl/forms/Uw69BK0kNZy22BCy1"
             target="_blank"
             rel="noopener noreferrer"

@@ -28,14 +28,16 @@ header {
 
     @include respond-below ( small ) {
         justify-content: space-around;
-        height: 700px;
+        height: 600px;
     }
 
     &::before {
-        background-image: url( '../assets/sunset.jpg' );
+        background-image: url( '../assets/events.jpg' );
         background-repeat: none;
         background-position: center bottom;
         background-size: cover;
+        -webkit-filter: blur(2.5px);
+        filter: blur(2.5px);
         content: '';
         height: 800px;
         left: 0;
@@ -47,7 +49,7 @@ header {
     }
 
     &::after {
-        background: rgba( $black, .3 );
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .85) 100%);
         height: 800px;
         width: 100%;
         content: '';
@@ -74,7 +76,8 @@ header {
 
         @include respond-below ( small ) {
             flex-direction: column;
-            max-width: 50vw;
+            margin-bottom: 1em;
+            max-width: 70vw;
 
             .logo {
                 margin-right: 0;
@@ -88,6 +91,7 @@ header {
 
         @include respond-above ( small ) {
             max-width: 70vw;
+            width: 70vw;
 
             h1 {
                 font-size: 2em;
@@ -99,6 +103,7 @@ header {
         display: flex;
         flex-direction: column;
         color: $white;
+        width: 100%;
     }
 
     h1 {
@@ -115,6 +120,7 @@ header {
     }
 
     h2 {
+        font-weight: 300;
         margin-bottom: 0;
 
         @include respond-below ( small ) {
@@ -157,6 +163,7 @@ header {
 
         .call-to-action {
             margin-bottom: 5em;
+            text-align: center;
 
             &:last-child {
                 margin-bottom: 0;
@@ -268,7 +275,7 @@ header {
 .info {
     display: flex;
     justify-content: space-around;
-    padding: 6em 0 4em;
+    padding: 4em 0;
     position: relative;
     width: 80vw;
     max-width: 1400px;
@@ -277,21 +284,6 @@ header {
     @include respond-below ( small ) {
         flex-direction: column;
         padding-bottom: 0;
-    }
-
-    &::before {
-        content: '';
-        display: block;
-        height: 200px;
-        position: absolute;
-        top: -8em;
-        background-image: url( '../assets/skyline.svg' );
-        width: 100vw;
-
-        @include respond-below ( small ) {
-            display: none;
-            visibility: hidden;
-        }
     }
 
     .section {
@@ -339,26 +331,30 @@ header {
         color: $text-color;
     }
 
-    .dark-button {
-        background-color: darken( $primary-color, 10% );
-        transition: background-color 200ms ease;
+    .ghost-button {
+        border: 2px solid $dark-grey;
+        border-radius: 3px;
+        color: $dark-grey;
+        font-weight: 500;
+        transition: transform .2s ease-in-out;
 
         &:hover {
-            background-color: darken( $primary-color, 20% );
-            transition: background-color 200ms ease;
+            font-weight: 700;
+            transform: scale(1.1);
+            transition: transform .2s ease-in-out;
         }
     }
 }
 
 button, .button {
-    padding: 1em 2em;
+    padding: .75em 1.5em;
     display: flex;
     cursor: pointer;
     align-items: center;
     color: $white;
-    font-size: 1.25em;
-    font-weight: 700;
-    border-radius: 40px;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 1px;
     border: none;
     text-decoration: none;
 
@@ -382,11 +378,16 @@ button, .button {
     }
 
     p {
-        font-size: 3em;
+        font-size: 2.75em;
         font-weight: 500;
         line-height: 1.25em;
         margin-right: 1.5em;
         margin-top: 0;
+
+        @include respond-below (small) {
+            font-size: 2.25em;
+            margin-right: 0;
+        }
     }
 }
 
@@ -439,6 +440,10 @@ button, .button {
         overflow: hidden;
         padding: 1em;
 
+        @include respond-below (small) {
+            height: auto;
+        }
+
         &.grow {
             cursor: pointer;
             transition: all .2s ease-in-out;
@@ -475,17 +480,24 @@ button, .button {
     background: $light-grey;
     color: $white;
     position: relative;
-    margin-top: 10em;
+    margin-top: 2em;
     padding: 2em 0;
     margin-bottom: -6em;
 
     .shoutout-container {
         display: flex;
-        flex-direction: row;
         margin: 0 auto;
         color: $text-color;
         width: 80vw;
         max-width: 1400px;
+
+        @include respond-above(small) {
+            flex-direction: row;
+        }
+
+        @include respond-below (small) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -577,27 +589,48 @@ button, .button {
 
 .footer {
     background: $dark-grey;
-    padding: 3em;
     display: flex;
     flex-flow: column;
     height: 300px;
     overflow: hidden;
     position: relative;
 
+    @include respond-above(small) {
+        padding: 3em;
+    }
+
+    @include respond-below (small) {
+        padding: 5em 3em 3em;
+    }
+
     .name {
-        bottom: -50px;
         fill: $white;
         opacity: .3;
         position: absolute;
         width: 90%;
         align-self: center;
+
+        @include respond-above(small) {
+            bottom: -30px;
+        }
+
+        @include respond-below (small) {
+            top: 10px;
+        }
     }
 
     .footer-content {
         align-items: flex-start;
         display: flex;
-        flex-direction: row;
         z-index: 1;
+
+        @include respond-above(small) {
+            flex-direction: row;
+        }
+
+        @include respond-below (small) {
+            flex-direction: column;
+        }
     }
 
     a {
@@ -609,12 +642,21 @@ button, .button {
     }
 
     .contact {
-        align-items: flex-start;
         justify-content: flex-start;
         display: flex;
         flex-flow: row wrap;
         color: $white;
         text-align: left;
+
+        @include respond-above(small) {
+            align-items: flex-start;
+        }
+
+        @include respond-below (small) {
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+        }
 
         h3 {
             font-weight: 300;
@@ -639,8 +681,15 @@ button, .button {
 
     .footer-info {
         color: $white;
-        text-align: right;
         flex: 1;
+
+        @include respond-above(small) {
+            text-align: right;
+        }
+
+        @include respond-below (small) {
+            text-align: center;
+        }
 
         p {
             line-height: 1.5em;
@@ -648,6 +697,7 @@ button, .button {
 
         .links {
             list-style-type: none;
+            padding-left: 0;
 
             a {
                 font-size: 1.25em;
