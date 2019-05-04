@@ -334,6 +334,13 @@ header {
         border-radius: 3px;
         color: $dark-grey;
         font-weight: 500;
+        transition: transform .2s ease-in-out;
+
+        &:hover {
+            font-weight: 700;
+            transform: scale(1.1);
+            transition: transform .2s ease-in-out;
+        }
     }
 }
 
