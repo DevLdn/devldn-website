@@ -48,13 +48,31 @@ class Footer extends Component {
             </p>
             <ul className="links">
               <li>
-                <a href="">Event Calendar</a>
+                <a
+                  href="https://www.meetup.com/Dev-London/events/calendar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Event Calendar
+                </a>
               </li>
               <li>
-                <a href="">Volunteer</a>
+                <a
+                  href="https://goo.gl/forms/iyx32mXrMsfRdjTw2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Volunteer
+                </a>
               </li>
               <li>
-                <a href="">Submit an Idea</a>
+                <a
+                  href="https://goo.gl/forms/Uw69BK0kNZy22BCy1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Submit an Idea
+                </a>
               </li>
             </ul>
           </div>

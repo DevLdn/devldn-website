@@ -28,7 +28,7 @@ header {
 
     @include respond-below ( small ) {
         justify-content: space-around;
-        height: 700px;
+        height: 600px;
     }
 
     &::before {
@@ -76,7 +76,8 @@ header {
 
         @include respond-below ( small ) {
             flex-direction: column;
-            max-width: 50vw;
+            margin-bottom: 1em;
+            max-width: 70vw;
 
             .logo {
                 margin-right: 0;
@@ -162,6 +163,7 @@ header {
 
         .call-to-action {
             margin-bottom: 5em;
+            text-align: center;
 
             &:last-child {
                 margin-bottom: 0;
@@ -381,6 +383,11 @@ button, .button {
         line-height: 1.25em;
         margin-right: 1.5em;
         margin-top: 0;
+
+        @include respond-below (small) {
+            font-size: 2.25em;
+            margin-right: 0;
+        }
     }
 }
 
@@ -433,6 +440,10 @@ button, .button {
         overflow: hidden;
         padding: 1em;
 
+        @include respond-below (small) {
+            height: auto;
+        }
+
         &.grow {
             cursor: pointer;
             transition: all .2s ease-in-out;
@@ -475,11 +486,18 @@ button, .button {
 
     .shoutout-container {
         display: flex;
-        flex-direction: row;
         margin: 0 auto;
         color: $text-color;
         width: 80vw;
         max-width: 1400px;
+
+        @include respond-above(small) {
+            flex-direction: row;
+        }
+
+        @include respond-below (small) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -571,27 +589,48 @@ button, .button {
 
 .footer {
     background: $dark-grey;
-    padding: 3em;
     display: flex;
     flex-flow: column;
     height: 300px;
     overflow: hidden;
     position: relative;
 
+    @include respond-above(small) {
+        padding: 3em;
+    }
+
+    @include respond-below (small) {
+        padding: 5em 3em 3em;
+    }
+
     .name {
-        bottom: -50px;
         fill: $white;
         opacity: .3;
         position: absolute;
         width: 90%;
         align-self: center;
+
+        @include respond-above(small) {
+            bottom: -30px;
+        }
+
+        @include respond-below (small) {
+            top: 10px;
+        }
     }
 
     .footer-content {
         align-items: flex-start;
         display: flex;
-        flex-direction: row;
         z-index: 1;
+
+        @include respond-above(small) {
+            flex-direction: row;
+        }
+
+        @include respond-below (small) {
+            flex-direction: column;
+        }
     }
 
     a {
@@ -603,12 +642,21 @@ button, .button {
     }
 
     .contact {
-        align-items: flex-start;
         justify-content: flex-start;
         display: flex;
         flex-flow: row wrap;
         color: $white;
         text-align: left;
+
+        @include respond-above(small) {
+            align-items: flex-start;
+        }
+
+        @include respond-below (small) {
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+        }
 
         h3 {
             font-weight: 300;
@@ -633,8 +681,15 @@ button, .button {
 
     .footer-info {
         color: $white;
-        text-align: right;
         flex: 1;
+
+        @include respond-above(small) {
+            text-align: right;
+        }
+
+        @include respond-below (small) {
+            text-align: center;
+        }
 
         p {
             line-height: 1.5em;
@@ -642,6 +697,7 @@ button, .button {
 
         .links {
             list-style-type: none;
+            padding-left: 0;
 
             a {
                 font-size: 1.25em;
