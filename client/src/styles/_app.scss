@@ -329,14 +329,11 @@ header {
         color: $text-color;
     }
 
-    .dark-button {
-        background-color: darken( $primary-color, 10% );
-        transition: background-color 200ms ease;
-
-        &:hover {
-            background-color: darken( $primary-color, 20% );
-            transition: background-color 200ms ease;
-        }
+    .ghost-button {
+        border: 2px solid $dark-grey;
+        border-radius: 3px;
+        color: $dark-grey;
+        font-weight: 500;
     }
 }
 

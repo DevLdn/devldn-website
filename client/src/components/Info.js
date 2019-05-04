@@ -19,7 +19,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://www.meetup.com/Dev-London/events/calendar/"
             target="_blank"
             rel="noopener noreferrer"
@@ -41,7 +41,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://goo.gl/forms/iyx32mXrMsfRdjTw2"
             target="_blank"
             rel="noopener noreferrer"
@@ -63,7 +63,7 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button dark-button shadow"
+            className="button ghost-button"
             href="https://goo.gl/forms/Uw69BK0kNZy22BCy1"
             target="_blank"
             rel="noopener noreferrer"
