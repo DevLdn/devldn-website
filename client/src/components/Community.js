@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import frontend from '../assets/front-end-logo.svg';
 import ltux from '../assets/ladies-that-ux.svg';
 import drupal from '../assets/drupal-london.jpg';
+import map from '../assets/london-map.png';
 
 class Community extends Component {
   render() {
@@ -23,7 +24,7 @@ class Community extends Component {
                 <img src={frontend} alt="Front End meetup logo" />
               </div>
             </a>
-            <h2>London front-end dev meetup</h2>
+            <h2>London front-end dev</h2>
             <p>
               Hang out and discuss JavaScript, CSS and other front-end related
               tips, tricks, hacks, and frameworks with some of the other local
@@ -42,7 +43,7 @@ class Community extends Component {
                 <img src={ltux} alt="Front End meetup logo" />
               </div>
             </a>
-            <h2>Ladies that UX (London)</h2>
+            <h2>Ladies that UX</h2>
             <p>
               The Ladies the UX, London chapter is a group of women and men who
               aim to build a positive space in the UX community to share,
@@ -69,6 +70,7 @@ class Community extends Component {
             </p>
           </div>
         </div>
+        <img src={map} />
       </div>
     );
   }
