@@ -508,7 +508,7 @@ button, .button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6em 2em 2em;
+    padding: 6em 2em 0;
     position: relative;
 
     h1 {
@@ -659,8 +659,11 @@ button, .button {
         }
 
         h3 {
+            color: $mid-grey;
+            font-size: 1em;
             font-weight: 300;
             min-width: 100%;
+            text-transform: uppercase;
         }
 
         .social {
@@ -700,8 +703,8 @@ button, .button {
             padding-left: 0;
 
             a {
-                font-size: 1.25em;
-                font-weight: 500;
+                font-size: 1em;
+                font-weight: 300;
                 line-height: 1.5em;
             }
         }
