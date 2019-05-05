@@ -378,7 +378,7 @@ button, .button {
     }
 
     p {
-        font-size: 2.75em;
+        font-size: 2.65em;
         font-weight: 500;
         line-height: 1.25em;
         margin-right: 1.5em;
@@ -405,7 +405,7 @@ button, .button {
     h1, h2 {
         color: $light-grey;
         font-weight: 100;
-        margin: 0 0 1em;
+        margin: 0;
     }
 
     a {
@@ -415,11 +415,14 @@ button, .button {
     .current {
         border-bottom: 1px solid rgba( $mid-grey, .5 );
         margin-bottom: 2em;
-        padding-bottom: 2em;
+        padding-bottom: 1em;
 
         .thanks {
-            font-size: 1.25em;
+            font-size: 1em;
+            font-weight: 300;
             line-height: 1.5em;
+            margin-top: .25em;
+            margin-bottom: 0;
         }
     }
 }
@@ -470,8 +473,15 @@ button, .button {
     text-align: left;
 
     .sponsor-list-item {
-        font-size: 1.25em;
+        font-size: 1em;
+        font-weight: 300;
         margin-bottom: 1em;
+
+        a {
+            font-size: 1.25em;
+            font-weight: 400;
+            text-decoration: none;
+        }
     }
 }
 
@@ -516,7 +526,7 @@ button, .button {
     }
 
     p {
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     .group-listings {
@@ -524,6 +534,7 @@ button, .button {
         flex-direction: row;
         align-items: flex-start;
         margin-top: 2em;
+        margin-bottom: 2em;
         width: 80vw;
         max-width: 1400px;
 
@@ -578,6 +589,10 @@ button, .button {
                 max-height: 80%;
                 max-width: 80%;
             }
+        }
+
+        h2 {
+            margin-bottom: 0;
         }
 
         h2, p {
