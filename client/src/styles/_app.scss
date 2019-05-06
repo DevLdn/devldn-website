@@ -34,9 +34,8 @@ header {
     &::before {
         background-image: url( '../assets/events.jpg' );
         background-repeat: none;
-        background-position: center bottom;
+        background-position: center center;
         background-size: cover;
-        -webkit-filter: blur(2.5px);
         filter: blur(2.5px);
         content: '';
         height: 800px;
