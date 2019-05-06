@@ -70,7 +70,15 @@ class Community extends Component {
             </p>
           </div>
         </div>
-        <img src={map} />
+        <div className="map">
+          <a
+            href="https://goo.gl/maps/Mec5kPfn6G53gZVt9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={map} />
+          </a>
+        </div>
       </div>
     );
   }
