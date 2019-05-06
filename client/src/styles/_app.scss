@@ -600,6 +600,14 @@ button, .button {
             line-height: 1.75em;
         }
     }
+
+    .map {
+        background: $map-container;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .footer {
