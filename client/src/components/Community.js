@@ -76,7 +76,7 @@ class Community extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={map} />
+            <img src={map} alt="London Ontario map" />
           </a>
         </div>
       </div>
