@@ -10,7 +10,7 @@ class Sponsors extends Component {
           <div className="mission">
             <h2 className="small">Our Mission</h2>
             <p>
-              Dev London is here is to provide insights and inspiration through
+              Dev London is here to provide insights and inspiration through
               leadership and networking with the local tech community.
             </p>
           </div>
