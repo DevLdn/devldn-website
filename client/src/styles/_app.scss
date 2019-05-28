@@ -5,6 +5,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -119,6 +123,7 @@ header {
     }
 
     h2 {
+        font-size: 2em;
         font-weight: 300;
         margin-bottom: 0;
 
@@ -599,6 +604,15 @@ button, .button {
             line-height: 1.75em;
         }
     }
+}
+
+.footer {
+    background: $dark-grey;
+    display: flex;
+    flex-flow: column;
+    margin-top: auto;
+    overflow: hidden;
+    position: relative;
 
     .map {
         background: $map-container;
@@ -606,23 +620,6 @@ button, .button {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-}
-
-.footer {
-    background: $dark-grey;
-    display: flex;
-    flex-flow: column;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-
-    @include respond-above(small) {
-        padding: 3em;
-    }
-
-    @include respond-below (small) {
-        padding: 5em 3em 3em;
     }
 
     .name {
@@ -644,14 +641,17 @@ button, .button {
     .footer-content {
         align-items: flex-start;
         display: flex;
+        height: 300px;
         z-index: 1;
 
         @include respond-above(small) {
             flex-direction: row;
+            padding: 0 3em 3em;
         }
 
         @include respond-below (small) {
             flex-direction: column;
+            padding: 5em 3em 3em;
         }
     }
 

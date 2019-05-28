@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import frontend from '../assets/front-end-logo.svg';
 import ltux from '../assets/ladies-that-ux.svg';
 import drupal from '../assets/drupal-london.jpg';
-import map from '../assets/london-map.png';
 
 class Community extends Component {
   render() {
@@ -69,15 +68,6 @@ class Community extends Component {
               development, theming, site building, case studies, and more.
             </p>
           </div>
-        </div>
-        <div className="map">
-          <a
-            href="https://goo.gl/maps/Mec5kPfn6G53gZVt9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={map} alt="London Ontario map" />
-          </a>
         </div>
       </div>
     );

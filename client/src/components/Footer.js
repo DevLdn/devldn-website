@@ -3,11 +3,21 @@ import { ReactComponent as DevName } from '../assets/dev-london-name.svg';
 import twitter from '../assets/twitter.svg';
 import slack from '../assets/Slack_Mark.svg';
 import meetup from '../assets/meetup-logo.svg';
+import map from '../assets/london-map.png';
 
 class Footer extends Component {
   render() {
     return (
       <div className="footer">
+        <div className="map">
+          <a
+            href="https://goo.gl/maps/Mec5kPfn6G53gZVt9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={map} alt="London Ontario map" />
+          </a>
+        </div>
         <DevName className="name" />
         <div className="footer-content">
           <div className="contact">
