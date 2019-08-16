@@ -32,4 +32,6 @@ WORKDIR /app
 COPY --from=server /server ./
 COPY --from=client /client/build ./client
 
+EXPOSE 80
+
 CMD ["npm", "start"]

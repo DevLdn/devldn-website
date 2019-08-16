@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import frontend from '../assets/front-end-logo.svg';
 import ltux from '../assets/ladies-that-ux.svg';
 import drupal from '../assets/drupal-london.jpg';
-import map from '../assets/london-map.png';
 
 class Community extends Component {
   render() {
@@ -70,7 +69,6 @@ class Community extends Component {
             </p>
           </div>
         </div>
-        <img src={map} />
       </div>
     );
   }
