@@ -19,6 +19,14 @@ code {
     font-family: $code-font;
 }
 
+a {
+    color: $primary-color;
+
+    &:hover {
+        color: $white;
+    }
+}
+
 header {
     display: flex;
     min-height: 100%;
@@ -36,7 +44,7 @@ header {
     }
 
     &::before {
-        background-image: url( '../assets/events.jpg' );
+        background-image: url( '../assets/events2.jpg' );
         background-repeat: none;
         background-position: center center;
         background-size: cover;
@@ -437,9 +445,9 @@ button, .button {
 
     .partner-logo {
         background: $white;
-        height: 100px;
-        width: 100px;
-        border-radius: 100px;
+        height: 80px; //normally 100px
+        width: 80px; //normally 100px
+        border-radius: 80px; //normally 100px
         margin: 1em;
         display: flex;
         align-items: center;
@@ -652,14 +660,6 @@ button, .button {
         @include respond-below (small) {
             flex-direction: column;
             padding: 5em 3em 3em;
-        }
-    }
-
-    a {
-        color: $primary-color;
-
-        &:hover {
-            color: $white;
         }
     }
 
