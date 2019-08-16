@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import streamline from '../assets/streamline.gif';
-import wrkhub from '../assets/wrkhub-logo.png';
+import vehikl from '../assets/vehikl-square.jpg';
+import infotech from '../assets/info-tech.png';
+import mobials from '../assets/mobials.png';
 
 class Sponsors extends Component {
   render() {
@@ -23,23 +24,35 @@ class Sponsors extends Component {
               </p>
               <div className="sponsors-gallery">
                 <a
-                  href="https://wrkhub.ca/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partner-logo grow shadow"
-                >
-                  <img src={wrkhub} className="full-width" alt="Wrkhub logo" />
-                </a>
-                <a
-                  href="https://streamlineicons.com/"
+                  href="https://mobials.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="partner-logo grow shadow"
                 >
                   <img
-                    src={streamline}
+                    src={mobials}
                     className="full-width"
-                    alt="Streamline Icons logo"
+                    alt="Mobials logo"
+                  />
+                </a>
+                <a
+                  href="https://vehikl.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="partner-logo grow shadow"
+                >
+                  <img src={vehikl} className="full-width" alt="Vehikl logo" />
+                </a>
+                <a
+                  href="https://www.infotech.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="partner-logo grow shadow"
+                >
+                  <img
+                    src={infotech}
+                    className="full-width"
+                    alt="Info-Tech logo"
                   />
                 </a>
               </div>
@@ -47,6 +60,26 @@ class Sponsors extends Component {
             <div className="past">
               <h2>Past Sponsors</h2>
               <ul className="sponsors-list">
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://streamlineicons.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Streamline Icons
+                  </a>{' '}
+                  (giveaway sponsor)
+                </li>
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://wrkhub.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WrkHub
+                  </a>{' '}
+                  (venue sponsor)
+                </li>
                 <li className="sponsor-list-item">
                   <a
                     href="https://wesbos.com/"
