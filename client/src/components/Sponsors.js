@@ -24,18 +24,6 @@ class Sponsors extends Component {
               </p>
               <div className="sponsors-gallery">
                 <a
-                  href="https://mobials.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partner-logo grow shadow"
-                >
-                  <img
-                    src={mobials}
-                    className="full-width"
-                    alt="Mobials logo"
-                  />
-                </a>
-                <a
                   href="https://vehikl.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -60,6 +48,16 @@ class Sponsors extends Component {
             <div className="past">
               <h2>Past Sponsors</h2>
               <ul className="sponsors-list">
+                <li className="sponsor-list-item">
+                  <a
+                    href="https://mobials.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Mobials Inc.
+                  </a>{' '}
+                  (venue sponsor)
+                </li>
                 <li className="sponsor-list-item">
                   <a
                     href="https://streamlineicons.com/"
