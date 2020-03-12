@@ -7,6 +7,7 @@
 `docker build -t devldn.ca .`
 
 ### Docker Run
+
 Environment Variables
 
 PORT=5000
@@ -18,9 +19,12 @@ NODE_ENV=production
 
 ## Client
 
+[![Build Status](https://drone.jesseobrien.dev/api/badges/LadyCarni/lunanova2019/status.svg)](https://drone.jesseobrien.dev/LadyCarni/lunanova2019)
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ### Get up and running
+
 ```
 cp .env.example .env
 npm install
@@ -28,6 +32,7 @@ npm start
 ```
 
 ### Features
+
 This project is built with `Create React App`
 
 This project uses:
