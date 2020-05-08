@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import vehikl from '../assets/vehikl-square.jpg';
-import infotech from '../assets/info-tech.png';
-import mobials from '../assets/mobials.png';
+import jetbrains from '../assets/jetbrains_logo.png';
 
 class Sponsors extends Component {
   render() {
@@ -24,24 +22,12 @@ class Sponsors extends Component {
               </p>
               <div className="sponsors-gallery">
                 <a
-                  href="https://vehikl.com/"
+                  href="https://www.jetbrains.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="partner-logo grow shadow"
                 >
-                  <img src={vehikl} className="full-width" alt="Vehikl logo" />
-                </a>
-                <a
-                  href="https://www.infotech.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partner-logo grow shadow"
-                >
-                  <img
-                    src={infotech}
-                    className="full-width"
-                    alt="Info-Tech logo"
-                  />
+                  <img src={jetbrains} className="full-width" alt="Jetbrains logo" />
                 </a>
               </div>
             </div>
